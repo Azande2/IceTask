@@ -22,43 +22,79 @@
         android:id="@+id/edtTipPercentage"
         android:layout_width="0dp"
         android:layout_height="60dp"
-        android:hint="Enter Percent Here"
+        android:hint="Enter Tip Percentage"
         android:inputType="number"
-        app:layout_constraintTop_toBottomOf="@+id/imageTip"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         android:padding="10dp"
-        />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageTip" />
+
     <EditText
         android:id="@+id/edtBillAmt"
         android:layout_width="0dp"
         android:layout_height="64dp"
-        android:hint="Enter Billing Amount here"
+        android:hint="Enter Billing Amount"
         android:inputType="numberDecimal"
-        app:layout_constraintTop_toBottomOf="@+id/edtTipPercentage"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         android:padding="10dp"
-        />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtTipPercentage" />
+
+    <EditText
+        android:id="@+id/edtPeople"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:hint="Number of People"
+        android:inputType="number"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtBillAmt" />
+
     <Button
         android:id="@+id/btnCalculate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Calculate"
-        app:layout_constraintTop_toBottomOf="@+id/edtBillAmt"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtPeople" />
 
     <TextView
         android:id="@+id/txtTip"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Tip Amount: R"
-        app:layout_constraintTop_toBottomOf="@+id/btnCalculate"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCalculate" />
+
+    <TextView
+        android:id="@+id/txtTotalBill"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Bill: R"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTip" />
+
+    <TextView
+        android:id="@+id/txtSplitBill"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Each Person Pays (Bill): R"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTotalBill" />
+
+    <TextView
+        android:id="@+id/txtSplitTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Each Person Pays (Tip): R"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtSplitBill" />
 
     <TextView
         android:id="@+id/txtTitle"
@@ -70,7 +106,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.101"
         app:layout_constraintStart_toStartOf="parent"
-
         app:layout_constraintTop_toTopOf="@+id/imageTip" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
